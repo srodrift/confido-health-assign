@@ -1,5 +1,12 @@
 # AI Front-Desk Voice Assistant — Confido Health Take-Home
 
+## 📁 Repository Contents
+- **main.py** – Core FastAPI backend handling scheduling, insurance, and FAQ routes  
+- **requirements.txt** – Python dependencies for local setup  
+- **Procfile** – Command used for deployment on Railway  
+- **README.md** – Setup and usage instructions  
+- **SYSTEM_DESIGN.md** – Explanation of architecture, tech stack, and prompt design  
+
 This project is a prototype AI front-desk assistant for healthcare admin tasks.  
 It supports **appointment scheduling**, **insurance verification**, and **clinic FAQs**, and is integrated with a **voice assistant (VAPI)** for real-time, spoken interactions.
 
