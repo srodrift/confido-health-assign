@@ -1,33 +1,42 @@
 # AI Front-Desk Voice Assistant — Confido Health Take-Home
 
-This project demonstrates a prototype AI voice assistant for healthcare front-office automation.  
-It handles appointment scheduling, insurance verification, and FAQs using Generative AI and Voice AI.
+This project is a prototype AI front-desk assistant for healthcare admin tasks.  
+It supports **appointment scheduling**, **insurance verification**, and **clinic FAQs**, and is integrated with a **voice assistant (VAPI)** for real-time, spoken interactions.
 
-## 🚀 Features
+## Live Demo (API)
+Base URL: https://YOUR-RAILWAY-DOMAIN.up.railway.app  
+Interactive API docs: https://YOUR-RAILWAY-DOMAIN.up.railway.app/docs
+
+> Replace the domain above with your Railway public domain.
+
+---
+
+## Features
 - Appointment booking via `/schedule`
 - Insurance verification via `/verify_insurance`
 - Clinic FAQs via `/faq`
-- Deployed on **Railway**
-- Integrated with **VAPI** for real-time voice interaction
+- Deployed on Railway (publicly reachable)
+- Voice assistant integration via VAPI (speech-to-text, LLM, text-to-speech)
 
-## 🧠 Tech Stack
-- FastAPI (backend API)
-- Python 3.10
-- OpenAI/VAPI for conversational intelligence
-- Railway for cloud hosting
-- JSON-based simulation (no real integrations)
+---
 
-## 🧩 Endpoints
-| Endpoint | Method | Description |
-|-----------|---------|-------------|
-| `/` | GET | Health check |
-| `/schedule` | POST | Books appointments |
-| `/verify_insurance` | POST | Verifies insurance provider |
-| `/faq` | GET | Answers clinic FAQs |
+## Tech Stack
+- **Backend:** FastAPI (Python)
+- **Voice/Orchestration:** VAPI (configurable STT/TTS + LLM)
+- **Hosting:** Railway
+- **Python:** 3.10+
 
-## 💻 How to Run Locally
-```bash
-git clone <repo-url>
-cd <repo-folder>
-pip install -r requirements.txt
-uvicorn main:app --reload
+---
+
+## Endpoints
+
+| Endpoint            | Method | Description                              |
+|--------------------|--------|------------------------------------------|
+| `/`                | GET    | Health check                             |
+| `/schedule`        | POST   | Books an appointment                     |
+| `/verify_insurance`| POST   | Verifies provider acceptance (mocked)    |
+| `/faq`             | GET    | Answers clinic FAQs (hours/location/etc) |
+
+### Request / Response Examples
+
+**Health Check**
